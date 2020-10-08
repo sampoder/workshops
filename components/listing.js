@@ -40,6 +40,7 @@ const WorkshopCard = ({ slug, name, description, img, section }) => (
 const Listing = ({ id, title, description, workshops, ...props }) => (
   <Box
     as="section"
+    id={{ title.toLowerCase().replace(" ", "_") }}
     sx={{
       backgroundImage: theme =>
         `linear-gradient(to bottom, ${theme.colors.sheet}, ${theme.colors.sunken})`,
@@ -51,7 +52,7 @@ const Listing = ({ id, title, description, workshops, ...props }) => (
   >
     <Container>
       <Heading as="h2" variant="headline" sx={{ mt: 0, mb: 1 }}>
-        {title}
+        {xf}
       </Heading>
       <Text variant="caption" sx={{ fontSize: 2 }}>
         {description}
